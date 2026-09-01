@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.08); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -100; }
+    }
+    @keyframes radarSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .node-pulse {
+      transform-origin: center;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    .floating-box {
+      animation: float 4s ease-in-out infinite;
+    }
+    .grid-line {
+      stroke: #1e293b;
+      stroke-width: 1;
+      stroke-opacity: 0.4;
+    }
+    .connection-line {
+      stroke: #38bdf8;
+      stroke-width: 1.5;
+      stroke-dasharray: 6,6;
+      animation: dash 20s linear infinite;
+      opacity: 0.6;
+    }
+    .radar-beam {
+      transform-origin: 980px 180px;
+      animation: radarSweep 6s linear infinite;
+    }
+    .title-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 19px;
+      fill: #94a3b8;
+      font-weight: 400;
+    }
+    .badge-pill {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Background Grid -->
+  <line x1="0" y1="60" x2="1200" y2="60" class="grid-line" />
+  <line x1="0" y1="120" x2="1200" y2="120" class="grid-line" />
+  <line x1="0" y1="180" x2="1200" y2="180" class="grid-line" />
+  <line x1="0" y1="240" x2="1200" y2="240" class="grid-line" />
+  <line x1="0" y1="300" x2="1200" y2="300" class="grid-line" />
+
+  <line x1="150" y1="0" x2="150" y2="360" class="grid-line" />
+  <line x1="300" y1="0" x2="300" y2="360" class="grid-line" />
+  <line x1="450" y1="0" x2="450" y2="360" class="grid-line" />
+  <line x1="600" y1="0" x2="600" y2="360" class="grid-line" />
+  <line x1="750" y1="0" x2="750" y2="360" class="grid-line" />
+  <line x1="900" y1="0" x2="900" y2="360" class="grid-line" />
+  <line x1="1050" y1="0" x2="1050" y2="360" class="grid-line" />
+
+  <!-- Network / Topology Graphics Right Side -->
+  <g opacity="0.85">
+    <!-- Concentric radar circles -->
+    <circle cx="980" cy="180" r="120" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" />
+    <circle cx="980" cy="180" r="80" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+    <circle cx="980" cy="180" r="40" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.4" />
+
+    <!-- Radar Sweep -->
+    <g class="radar-beam">
+      <path d="M 980 180 L 1100 180 A 120 120 0 0 0 1065 95 Z" fill="url(#accent-grad)" opacity="0.25" />
+    </g>
+
+    <!-- Connection Lines -->
+    <line x1="980" y1="180" x2="880" y2="100" class="connection-line" />
+    <line x1="980" y1="180" x2="1080" y2="110" class="connection-line" />
+    <line x1="980" y1="180" x2="1060" y2="260" class="connection-line" />
+    <line x1="980" y1="180" x2="890" y2="250" class="connection-line" />
+    <line x1="880" y1="100" x2="1080" y2="110" class="connection-line" />
+
+    <!-- Cloud Asset Central Node -->
+    <circle cx="980" cy="180" r="24" fill="#1e1b4b" stroke="#818cf8" stroke-width="3" filter="url(#glow)" />
+    <circle cx="980" cy="180" r="10" fill="#38bdf8" class="node-pulse" />
+
+    <!-- Discovered Asset Nodes -->
+    <!-- AWS Node -->
+    <g transform="translate(880, 100)" class="floating-box">
+      <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#f59e0b" stroke-width="2" filter="url(#subtle-glow)" />
+      <text x="0" y="4" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#fbbf24">AWS</text>
+    </g>
+
+    <!-- Azure Node -->
+    <g transform="translate(1080, 110)" class="floating-box" style="animation-delay: -1s;">
+      <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#0284c7" stroke-width="2" filter="url(#subtle-glow)" />
+      <text x="0" y="4" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#38bdf8">AZURE</text>
+    </g>
+
+    <!-- GCP Node -->
+    <g transform="translate(1060, 260)" class="floating-box" style="animation-delay: -2s;">
+      <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#10b981" stroke-width="2" filter="url(#subtle-glow)" />
+      <text x="0" y="4" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#34d399">GCP</text>
+    </g>
+
+    <!-- K8s Node -->
+    <g transform="translate(890, 250)" class="floating-box" style="animation-delay: -3s;">
+      <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#6366f1" stroke-width="2" filter="url(#subtle-glow)" />
+      <text x="0" y="4" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#a5b4fc">K8S</text>
+    </g>
+  </g>
+
+  <!-- Left Content -->
+  <g transform="translate(70, 75)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="280" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.9" />
+    <circle cx="14" cy="14" r="5" fill="#38bdf8" class="node-pulse" />
+    <text x="30" y="19" class="badge-pill">CLOUD SECURITY &amp; CAASM ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text x="0" y="80" class="title-text" fill="url(#text-grad)" filter="url(#subtle-glow)">
+      Awesome Cloud Asset Inventory
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="125" class="subtitle-text">
+      Curated Multi-Cloud Discovery, CSPM, CAASM &amp; Infrastructure Graph Intelligence
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="110" height="26" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="55" y="17" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">🔍 Discovery</text>
+
+      <rect x="120" y="0" width="105" height="26" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="172" y="17" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">🛡️ CSPM</text>
+
+      <rect x="235" y="0" width="110" height="26" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="290" y="17" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">📊 CAASM</text>
+
+      <rect x="355" y="0" width="140" height="26" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="425" y="17" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">⚡ Multi-Cloud SQL</text>
+
+      <rect x="505" y="0" width="125" height="26" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="567" y="17" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#cbd5e1">🕸️ Graph Map</text>
+    </g>
+  </g>
+</svg>
