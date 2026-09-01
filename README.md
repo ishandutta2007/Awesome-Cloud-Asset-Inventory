@@ -28,95 +28,32 @@ How to Contribute
 
 Disclaimer
 
-SaaS/Hosted Platforms
+## SaaS/Hosted Platforms
 
-Lacework
-
-Cloud security and CNAPP platform providing cloud asset visibility, configuration intelligence, workload security, threat detection, and security posture management across cloud environments.
-
-Wiz
-
-Agentless cloud security platform that discovers cloud resources and relationships across multi-cloud environments while connecting asset inventory with vulnerabilities, identities, exposures, and attack paths.
-
-Orca Security
-
-Agentless cloud security platform providing automated cloud asset discovery and contextual risk analysis across cloud infrastructure, workloads, identities, and data assets.
-
-Tenable Cloud Security
-
-Cloud-native security platform providing visibility into cloud resources, configurations, identities, vulnerabilities, and security posture across public-cloud environments.
-
-Palo Alto Networks Prisma Cloud
-
-Cloud-native application protection platform combining cloud asset visibility with CSPM, CIEM, workload security, vulnerability management, compliance, and infrastructure security.
-
-Microsoft Defender for Cloud
-
-Cloud security platform providing security posture management, cloud asset visibility, recommendations, compliance monitoring, workload protection, and multi-cloud security capabilities.
-
-Microsoft Defender CSPM
-
-Cloud security posture management capabilities within Microsoft Defender for Cloud, providing inventory and contextual security analysis for cloud resources and cloud-native workloads.
-
-Google Cloud Asset Inventory
-
-Native Google Cloud service for searching, exporting, analyzing, and monitoring metadata and configuration information about Google Cloud resources and IAM policies.
-
-CloudQuery
-
-Cloud infrastructure data platform that synchronizes configuration and asset data from cloud providers, SaaS services, and APIs into SQL-queryable destinations. It supports cloud asset inventory, CSPM, FinOps, and vulnerability-management use cases.
-
-Steampipe
-
-SQL-based cloud intelligence platform that enables users to query cloud APIs and infrastructure using SQL, supporting inventory, compliance, governance, and security analysis.
-
-Axonius
-
-Cybersecurity asset management platform that aggregates asset information from many security and IT systems to create a unified inventory across devices, identities, cloud assets, SaaS, and other technology environments.
-
-JupiterOne
-
-Cyber asset intelligence platform focused on collecting and analyzing cyber assets and their relationships through graph-based asset visibility and security context.
-
-Censys
-
-Internet and attack-surface intelligence platform that can help organizations discover externally exposed cloud infrastructure, services, certificates, and assets.
-
-CyCognito
-
-External attack-surface management platform that discovers and analyzes externally exposed organizational and cloud-connected assets.
-
-Randori
-
-Attack-surface and exposure-management technology within Microsoft's security ecosystem, focused on discovering and analyzing organizational attack surfaces.
-
-Rapid7 InsightCloudSec
-
-Cloud security and compliance platform providing cloud infrastructure visibility, resource inventory, policy monitoring, risk analysis, and automated remediation.
-
-Check Point CloudGuard
-
-Cloud-native security platform providing cloud posture management, workload protection, application security, and infrastructure visibility.
-
-Aqua Security
-
-Cloud-native security platform providing visibility and protection for cloud workloads, containers, Kubernetes, and cloud infrastructure.
-
-Sysdig
-
-Cloud-native security platform supporting Kubernetes and cloud asset visibility, workload analysis, posture management, vulnerability detection, and runtime security.
-
-Datadog Cloud Security Management
-
-Cloud security and observability platform combining cloud infrastructure visibility with security posture monitoring, misconfiguration detection, and threat analysis.
-
-ServiceNow CMDB
-
-Enterprise configuration-management platform that can integrate discovery and cloud inventory information into a centralized CMDB and service-management ecosystem.
-
-Device42
-
-IT asset discovery and infrastructure inventory platform supporting hybrid infrastructure, cloud resources, dependencies, and configuration-management use cases.
+| Product | Description | Starting Tier / Pricing | Free Tier Limit / Free Trial Details |
+| :--- | :--- | :--- | :--- |
+| **Lacework (FortiCNAPP)** | Cloud security and CNAPP platform providing cloud asset visibility, configuration intelligence, workload security, threat detection, and security posture management across cloud environments. | Custom enterprise contracts starting at ~$36,000/year (or ~$360/workload/year for legacy starter tiers). | 14-day guided Cloud Security Assessment (CSA) / PoC evaluation (no perpetual free tier). |
+| **Wiz** | Agentless cloud security platform that discovers cloud resources and relationships across multi-cloud environments while connecting asset inventory with vulnerabilities, identities, exposures, and attack paths. | Custom enterprise subscription starting at ~$30,000–$50,000/year (licensed in blocks of 100 workloads across Cloud, Code, and Sensor modules). | 14-day guided Proof of Concept (PoC) / cloud risk assessment trial (no perpetual free tier). |
+| **Orca Security** | Agentless cloud security platform providing automated cloud asset discovery and contextual risk analysis across cloud infrastructure, workloads, identities, and data assets. | Annual contracts typically starting at ~$15,000/year (~$39–$45/workload/year for core CSPM/CWPP modules). | 30-day full-featured free trial available on AWS Marketplace and official portal (no perpetual free tier). |
+| **Tenable Cloud Security** | Cloud-native security platform providing visibility into cloud resources, configurations, identities, vulnerabilities, and security posture across public-cloud environments. | Enterprise contracts starting at ~$150–$350/resource/year (or via Tenable One asset licensing starting at ~$2,275/year base packs). | 30-day free trial available via AWS Marketplace / web portal request (full CNAPP & CIEM evaluation; no perpetual free tier). |
+| **Palo Alto Networks Prisma Cloud** | Cloud-native application protection platform combining cloud asset visibility with CSPM, CIEM, workload security, vulnerability management, compliance, and infrastructure security. | Credit-based model starting at ~$300–$640 per Prisma Cloud Credit/year (starter deployment bundles typically start at ~$10,800/year). | 30-day free trial on Prisma Cloud portal (15-day free trial with initial test credits on AWS Marketplace; no perpetual free tier). |
+| **Microsoft Defender for Cloud** | Cloud security platform providing security posture management, cloud asset visibility, recommendations, compliance monitoring, workload protection, and multi-cloud security capabilities. | Foundational CSPM is $0.00 (Free); Defender for Servers starts at $5.00–$15.00/server/month; Defender CSPM at $5.11/billable resource/month. | Foundational CSPM is Free forever (continuous asset discovery, Secure Score, MCSB benchmarks across Azure/AWS/GCP); 30-day free trial for all paid Defender plans. |
+| **Microsoft Defender CSPM** | Cloud security posture management capabilities within Microsoft Defender for Cloud, providing inventory and contextual security analysis for cloud resources and cloud-native workloads. | $5.11 per billable resource/month (metered hourly across compute, database, storage, and serverless assets). | 30-day free trial per subscription/environment (baseline asset posture and recommendations covered by Foundational CSPM free forever). |
+| **Google Cloud Asset Inventory** | Native Google Cloud service for searching, exporting, analyzing, and monitoring metadata and configuration information about Google Cloud resources and IAM policies. | $0.00 (Core Asset Inventory API search, export, and IAM policy analysis calls are free; standard GCP storage/BigQuery rates apply only for exported data sinks). | Free forever with unlimited API search and export calls across organization assets (subject to standard GCP per-project API rate quotas). |
+| **CloudQuery** | Cloud infrastructure data platform that synchronizes configuration and asset data from cloud providers, SaaS services, and APIs into SQL-queryable destinations. It supports cloud asset inventory, CSPM, FinOps, and vulnerability-management use cases. | AWS Marketplace Starter package starts at $44,516/year (1.2 billion synced rows + Silver support); self-hosted open-source CLI is free. | 14-day free trial for CloudQuery Cloud; monthly free sync quota for official cloud source plugins without credit card; open-source core SDK is free forever. |
+| **Steampipe (Turbot Pipes)** | SQL-based cloud intelligence platform that enables users to query cloud APIs and infrastructure using SQL, supporting inventory, compliance, governance, and security analysis. | Developer plan is $0.00 (Free); Team plan starts at $49.00/month (includes 3 users, 2,000 compute minutes, 20 GB storage; $19/additional user/month); Enterprise starts at $249.00/month. | Developer plan is Free forever (1 user, 400 compute minutes/month, 3 GB storage, 5 workspaces); Steampipe open-source CLI and plugins are free forever. |
+| **Axonius** | Cybersecurity asset management platform that aggregates asset information from many security and IT systems to create a unified inventory across devices, identities, cloud assets, SaaS, and other technology environments. | Annual enterprise subscription starting at ~$25,000–$35,000/year (~$3.00–$5.00/asset/month scaled by total unified assets). | 14-day guided proof-of-concept / interactive sandbox demo (no perpetual free tier). |
+| **JupiterOne** | Cyber asset intelligence platform focused on collecting and analyzing cyber assets and their relationships through graph-based asset visibility and security context. | Starter/Mid-Market plans start at ~$500.00/month (~$6,000/year for up to 200,000 data points); custom quotes for enterprise tiers. | Free Community tier forever (basic asset inventory and compliance tracking for startups, limited to 10 API requests/minute); 14-day free trial for paid tiers. |
+| **Censys** | Internet and attack-surface intelligence platform that can help organizations discover externally exposed cloud infrastructure, services, certificates, and assets. | Censys Search Community is $0.00; Search Starter begins at $100.00 (prepaid search credits); Censys ASM enterprise starts at ~$60,000/year. | Free Community tier forever (100 search credits / up to 250 queries/month for basic host and certificate lookups); 30-day free trial for Search Pro / 14-day trial for ASM. |
+| **CyCognito** | External attack-surface management platform that discovers and analyzes externally exposed organizational and cloud-connected assets. | Annual enterprise contracts typically start at ~$20,000–$30,000/year (scaled by external asset scope and scanning frequency). | Free Attack Surface Risk Assessment (scoped single scan/evaluation for a specific subsidiary or asset group; no perpetual free tier). |
+| **Randori (Palo Alto Networks)** | Attack-surface and exposure-management technology within Microsoft's / Palo Alto Networks security ecosystem, focused on discovering and analyzing organizational attack surfaces. | Enterprise contracts historically start at ~$15,000/year (now integrated into Palo Alto Networks Cortex XPANSE / ASM portfolio). | 7-day to 14-day scoped attack surface review / Proof-of-Concept assessment (no perpetual free tier). |
+| **Rapid7 InsightCloudSec** | Cloud security and compliance platform providing cloud infrastructure visibility, resource inventory, policy monitoring, risk analysis, and automated remediation. | Asset-based pricing starting at ~$5,000–$6,000/month (~$60,000–$66,000/year billed annually) for up to 500 billable cloud instances. | 30-day proof-of-concept / guided evaluation environment (no perpetual free tier). |
+| **Check Point CloudGuard** | Cloud-native security platform providing cloud posture management, workload protection, application security, and infrastructure visibility. | Starts at ~$36.00–$50.00/asset/year (~$3.00–$4.17/asset/month) on annual contracts, or pay-as-you-go per VM instance hour on AWS/Azure. | 30-day free trial on AWS Marketplace and direct portal (full security feature evaluation up to trial limits; no perpetual free tier). |
+| **Aqua Security** | Cloud-native security platform providing visibility and protection for cloud workloads, containers, Kubernetes, and cloud infrastructure. | Enterprise subscriptions start at ~$3,500–$10,000/year (based on workload units and code repositories; open-source Trivy/Tracee tools are free). | 14-day free trial for Aqua CSPM Advanced on AWS Marketplace; perpetually free Developer tier for basic container image scanning. |
+| **Sysdig** | Cloud-native security platform supporting Kubernetes and cloud asset visibility, workload analysis, posture management, vulnerability detection, and runtime security. | Starts at $15.00–$40.00/host/month (billed annually, or $0.007/compute hour); enterprise deployments average $40.00–$120.00/host/month. | 30-day free trial with full CNAPP and Kubernetes security features across connected hosts and clusters (no perpetual free tier). |
+| **Datadog Cloud Security Management** | Cloud security and observability platform combining cloud infrastructure visibility with security posture monitoring, misconfiguration detection, and threat analysis. | CSM Pro starts at $10.00/host/month (billed annually, or $12.00 on-demand); CSM Enterprise starts at $25.00/host/month ($30.00 on-demand). | 14-day free trial with full platform access (CSM, CSPM, and threat detection across connected infrastructure; no perpetual free tier). |
+| **ServiceNow CMDB** | Enterprise configuration-management platform that can integrate discovery and cloud inventory information into a centralized CMDB and service-management ecosystem. | ITOM Discovery packages start at ~$90.00–$200.00/user/month or ~$30.00–$45.00/managed node/year on enterprise contracts (typically starting ~$10,000–$40,000+/year). | Personal Developer Instance (PDI) Free forever on the ServiceNow Developer Portal (full CMDB schema and discovery workflows for learning/testing; must stay active). |
+| **Device42** | IT asset discovery and infrastructure inventory platform supporting hybrid infrastructure, cloud resources, dependencies, and configuration-management use cases. | Starts at ~$1,449.00/year (~$2.50–$4.50/device/month) for core discovery and inventory, scaling with monitored device tiers. | 14-day free trial limited to 100 devices (no credit card required; no perpetual free tier). |
 
 Open-Source GitHub Projects
 
