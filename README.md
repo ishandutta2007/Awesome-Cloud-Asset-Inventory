@@ -94,7 +94,7 @@ The open-source ecosystem provides modular, transparent, self-hosted building bl
 
 *Each repository includes a live GitHub star badge that links directly to its stargazers page.*
 
-| 🚀 Project | ⭐ Stars | 📂 Focus Area | 📝 Description |
+| 🚀 Project | ⭐ Github_Stars | 📂 Focus Area | 📝 Description |
 | :--- | :--- | :--- | :--- |
 | **[Apache Superset](https://github.com/apache/superset)** | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | BI & Inventory Dashboards | Modern open-source data exploration and business intelligence visualization platform for querying and dashboarding multi-cloud asset inventories. |
 | **[Grafana](https://github.com/grafana/grafana)** | [![Stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | Metrics & Inventory Dashboards | Leading open-source operational visualization and dashboarding platform for monitoring multi-cloud infrastructure assets, metrics, and security trends. |
